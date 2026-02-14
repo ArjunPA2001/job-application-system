@@ -1,0 +1,13 @@
+package com.jobApplicationSystem.interview_service.repository;
+
+import java.util.UUID;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.jobApplicationSystem.interview_service.models.Interview;
+
+@Repository
+public interface InterviewRepository extends JpaRepository<Interview,UUID> {
+
+}
