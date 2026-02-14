@@ -1,5 +1,6 @@
 package com.jobApplicationSystem.interview_service.repository;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,5 +10,5 @@ import com.jobApplicationSystem.interview_service.models.Interview;
 
 @Repository
 public interface InterviewRepository extends JpaRepository<Interview,UUID> {
-
+    public List<Interview> findByApplicationId(UUID applicationId);
 }

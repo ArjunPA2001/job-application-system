@@ -8,7 +8,7 @@ import com.jobApplicationSystem.interview_service.models.Interview;
 
 public class InterviewMapper {
 
-    public Interview toInterview(InterviewRequest interviewRequest) {
+    public static Interview toInterview(InterviewRequest interviewRequest) {
         Interview interview = new Interview();
         interview.setApplicationId(UUID.fromString(interviewRequest.getApplicationId()));
         interview.setInterviewType(interviewRequest.getInterviewType());
@@ -19,7 +19,7 @@ public class InterviewMapper {
         return interview;
     }
 
-    public InterviewResponse toDto(Interview interview) {
+    public static InterviewResponse toDto(Interview interview) {
         InterviewResponse interviewResponse = new InterviewResponse();
         interviewResponse.setInterviewId(interview.getInterviewId().toString());
         interviewResponse.setApplicationId(interview.getApplicationId().toString());
